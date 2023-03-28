@@ -1,7 +1,5 @@
 package ru.netology;
 
-import java.security.PrivilegedActionException;
-
 public class PersonBuilder {
     private String name;
     private String surname;
@@ -40,7 +38,7 @@ public class PersonBuilder {
         return this;
     }
 
-    public Person build() {
+    public Person build() throws IllegalStateException {
         Person person;
         if (name == null || surname == null) {
             throw new IllegalStateException("Отсутсвует имя или фамилия!");
